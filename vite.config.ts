@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename)
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/app-lince/' : '/',
+  base: mode === 'production' ? '/' : '/',
   plugins: [react()],
   server: {
     watch: {
