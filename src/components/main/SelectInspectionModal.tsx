@@ -21,7 +21,8 @@ import {
     //  console.log('Seleccionar inspección de EQUIPO')
     //  onClose()
     //}
-  
+    const baseUrl = import.meta.env.BASE_URL || '/'
+
     return (
       <Modal isOpen={isOpen} onClose={onClose} isCentered motionPreset="scale">
         <ModalOverlay />
@@ -43,7 +44,7 @@ import {
                 width="full"
                 rightIcon={<FaChevronRight />}
                 as="a"
-                href="/searchequipment"
+                href= {`${baseUrl}searchequipment`}
                 //onClick={handleEquipoClick}
               >
                 EQUIPO

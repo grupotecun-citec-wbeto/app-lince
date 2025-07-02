@@ -14,6 +14,8 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
 import * as ReactDOM from 'react-dom/client'
 import App from './App'
+import { BrowserRouter as Router } from 'react-router-dom'
+
 
 
 const colors = {
@@ -30,9 +32,13 @@ const rootElement = document.getElementById('root')
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
-      <ChakraProvider theme={theme}>
-        <App />
-      </ChakraProvider>
+      
+        <ChakraProvider theme={theme}>
+          <Router basename={import.meta.env.BASE_URL}>
+            <App />
+          </Router>
+
+        </ChakraProvider>
     </React.StrictMode>,
   )
 } else {

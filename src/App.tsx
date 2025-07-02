@@ -3,7 +3,7 @@
 //import viteLogo from '/vite.svg'
 import './App.css'
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Main from "@pages/Main";
 import Equipment from "@/pages/Equipment";
 import Client from "@/pages/Client";
@@ -16,15 +16,15 @@ function App() {
   //const [count, setCount] = useState(0)
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/searchequipment" element={<Equipment />} />
-        <Route path="/client" element={<Client />} />
-        <Route path="/questionsections" element={<QuestionSections />} />
-        <Route path="/question/:id" element={<Question />} />
-      </Routes>
-    </Router>
+    
+    <Routes >
+      <Route path="/" element={<Main />} />
+      <Route path="/searchequipment" element={<Equipment />} />
+      <Route path="/client" element={<Client />} />
+      <Route path="/questionsections" element={<QuestionSections />} />
+      <Route path="/question/:id" element={<Question />} />
+    </Routes>
+  
   )
 }
 
