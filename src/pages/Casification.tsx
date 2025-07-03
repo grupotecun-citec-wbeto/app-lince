@@ -1,21 +1,16 @@
 //import { Text } from "@chakra-ui/react";
 import ViewLayout from "@/layouts/ViewLayout";
-import { Button, HStack } from '@chakra-ui/react'
+import { Button,HStack } from "@chakra-ui/react";
+import FormularioClasificacion from "@/components/formularios/FormularioClasificacion";
 
-import InspectionItemCard from "@/components/questionsecctions/InspectionItemCard";
-
-
-const Question = () => {
+const Clasification = () => {
   
 
  return (
-    <ViewLayout title="Preparación maquina para inspección">
-        
+    <ViewLayout title="Información General">
         {/* Aquí puedes agregar más componentes o lógica según sea necesario */}
-        
-        <InspectionItemCard id="item1" label="1.1 - Chequear con customer para operator complaints" href="/casification"/>
-        <InspectionItemCard id="item2" label="1.2 - Chequear con customer para operator complaints"  href="/casification"/>
-
+        <FormularioClasificacion />
+        <div style={{ margin: "16px 0" }} />
         <div style={{ margin: "16px 0" }} />
         <HStack justify="space-between" mt={6} px={4}>
             <Button
@@ -39,4 +34,4 @@ const Question = () => {
   );
 };
 
-export default Question;
+export default Clasification;

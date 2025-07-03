@@ -59,7 +59,8 @@ type InspectionItemCardProps = {
   id: string
   label: string
   defaultValue?: string
-  onChange?: (value: string) => void
+  onChange?: (value: string) => void,
+  href?: string
 }
 
 const InspectionItemCard = ({
@@ -67,6 +68,7 @@ const InspectionItemCard = ({
   label,
   defaultValue = '',
   onChange,
+  href,
 }: InspectionItemCardProps) => {
   const { getRootProps, getRadioProps } = useRadioGroup({
     name: id,
@@ -91,10 +93,19 @@ const InspectionItemCard = ({
         py={2}
         borderRadius="md"
         mb={3}
+        cursor="pointer"
       >
+        {href ? (
+          <a href={href} style={{ textDecoration: 'none' }}>
         <Text fontWeight="semibold" fontSize="sm">
           {label}
         </Text>
+          </a>
+        ) : (
+          <Text fontWeight="semibold" fontSize="sm">
+        {label}
+          </Text>
+        )}
       </Box>
 
       <Grid
