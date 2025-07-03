@@ -18,7 +18,7 @@ const Clasification = () => {
                 colorScheme="gray"
                 
             >
-                ANTERIOR
+                Anterior
             </Button>
             <Button
                 bg="yellow.400"
@@ -27,7 +27,7 @@ const Clasification = () => {
                 color="black"
                 
             >
-                SIGUIENTE
+                Siguiente
             </Button>
         </HStack>
     </ViewLayout>
